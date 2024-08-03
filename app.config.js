@@ -19,7 +19,7 @@ export default {
       buildNumber: "1"
     },
     android: {
-      googleServicesFile: process.env.GOOGLE_SERVICES_JSON || "./google-services.json",
+      googleServicesFile: "./google-services.json",
       package: "com.traor.jwactivity",
       versionCode: 1,
       adaptiveIcon: {
