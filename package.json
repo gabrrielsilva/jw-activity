@@ -16,6 +16,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/html-elements": "^0.10.1",
     "@expo/vector-icons": "^14.0.0",
     "@gluestack-ui/button": "^1.0.7",
     "@gluestack-ui/nativewind-utils": "^1.0.23",
