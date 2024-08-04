@@ -14,27 +14,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab 1',
+          title: 'Inicio',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'cube' : 'cube-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="tab-two"
-        options={{
-          title: 'Tab 2',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'cube' : 'cube-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="tab-three"
-        options={{
-          title: 'Tab 3',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'cube' : 'cube-outline'} color={color} />
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
         }}
       />

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Text } from 'react-native';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { Button, ButtonText } from '@/components/ui/button';
+import { Text } from '@/components/ui/text';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Box } from '@/components/ui/box';
 
 GoogleSignin.configure({
   webClientId: process.env.EXPO_PUBLIC_CLIENT_ID,
 });
 
 export default function HomeScreen() {
-  const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>();
 
   function onAuthStateChanged(user: FirebaseAuthTypes.User | null) {
     setUser(user);
-    if (initializing) setInitializing(false);
   }
 
   async function onGoogleButtonPress() {
@@ -31,19 +31,31 @@ export default function HomeScreen() {
 
   if (!user) {
     return (
-      <SafeAreaView className='items-center justify-center flex-1 bg-white'>
-        <Text>Login</Text>
+      <Box className='items-center justify-center flex-1'>
         <Button
-          title="Google Sign-In"
+          size='md'
+          variant='solid'
+          action='primary'
           onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}
-        />
-      </SafeAreaView>
+        >
+          <ButtonText>Google Sign-In</ButtonText>
+        </Button>
+      </Box>
     );
   }
 
   return (
-    <SafeAreaView className='items-center justify-center flex-1 bg-white'>
-      <Text>Welcome {user.email}</Text>
-    </SafeAreaView>
+    <Box className='items-center justify-center flex-1'>
+      <Text className='text-typography-black'>Welcome {user.displayName}</Text>
+      <Button
+          size='md'
+          variant='solid'
+          action='primary'
+          className='w-40'
+          onPress={() => auth().signOut()}
+        >
+          <ButtonText>Sign-Out</ButtonText>
+        </Button>
+    </Box>
   );
 }
