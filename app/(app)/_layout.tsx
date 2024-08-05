@@ -8,7 +8,7 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: '#fff',
         headerShown: false,
-        tabBarActiveBackgroundColor: '#000'
+        tabBarActiveBackgroundColor: '#000',
       }}
     >
       <Tabs.Screen
@@ -16,7 +16,7 @@ export default function TabLayout() {
         options={{
           title: 'inicio',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={'home'} color={color} />
           ),
         }}
       />

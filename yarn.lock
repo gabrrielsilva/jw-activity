@@ -1623,6 +1623,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@gluestack-ui/avatar@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@gluestack-ui/avatar/-/avatar-0.1.17.tgz#7657defaa103c72c02fd57300bc79dc93ea47b77"
+  integrity sha512-L7R3GVjYK6o+tdCiCDZXvHjPi1FKwt9XAFHGlEsQ4dX6Qe7yWEi3K+e5UBpS1ugvja7SmNS+YZwvr+nnVcmohQ==
+  dependencies:
+    "@gluestack-ui/utils" "^0.1.12"
+
 "@gluestack-ui/button@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@gluestack-ui/button/-/button-1.0.7.tgz#513c42b895f285b527969f7dde9abc7f622d7905"
@@ -1654,6 +1661,13 @@
     "@react-native-aria/focus" "^0.2.9"
     "@react-native-aria/interactions" "0.2.13"
     "@react-native-aria/overlays" "^0.3.12"
+
+"@gluestack-ui/progress@^0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@gluestack-ui/progress/-/progress-0.1.16.tgz#9618581531cc127d3256a6b58725cf48dd6febad"
+  integrity sha512-pjNh8hOhYHTq9ko7topyB9hVpky8eO53aDIeDeaCpzG+YdMGPwYi/QngpIH15YrCLKp2ofiwfXwf+E9IvlRMMg==
+  dependencies:
+    "@gluestack-ui/utils" "^0.1.12"
 
 "@gluestack-ui/react-native-aria@^0.1.5":
   version "0.1.5"
